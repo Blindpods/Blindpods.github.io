@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat - My Retro Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Chat Room</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="chat.html">Chat</a></li>
+            <li><a href="downloads.html">Downloads</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div id="chatbox">
+            <div id="messages"></div>
+            <input type="text" id="messageInput" placeholder="Type your message...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 My Retro Website</p>
+    </footer>
+    <script>
+        function sendMessage() {
+            var input = document.getElementById('messageInput');
+            var messages = document.getElementById('messages');
+            var message = document.createElement('div');
+            message.textContent = input.value;
+            messages.appendChild(message);
+            input.value = '';
+        }
+    </script>
+</body>
+</html>
